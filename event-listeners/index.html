@@ -28,6 +28,17 @@
         <span id="count"></span>
         <button onclick="incCount()" id="inc-btn">+</button>
     </div>
+    <!-- ? Event Bubbling and Capture -->
+    <div onclick="alert('outer div')">Outer Div
+        <div onclick="alert('inner div')">Inner Div
+            <p onclick="console.log('paragraph event triggered'); event.stopPropagation()">Paragraph</p>
+        </div>
+    </div>
+
+    <div id="bubbling-in-js">
+        Outer Caputre in js
+        <div id="inner-bubbling-in-js">Inner capture in js</div>
+    </div>
     <!-- ? Script MUST be the last element in the body -->
     <script src="app.js"></script>
 </body>

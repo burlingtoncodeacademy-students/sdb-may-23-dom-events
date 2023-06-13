@@ -77,3 +77,15 @@ function decCount() {
     count--
     countSpan.textContent = count
 }
+
+// ? Event Bubbling in JS
+
+let outerJS = document.getElementById("bubbling-in-js")
+let innerJS = document.getElementById("inner-bubbling-in-js")
+
+outerJS.addEventListener("click", e => console.log("outer js bubble hit"))
+innerJS.addEventListener("click", e => {
+    e.stopPropagation()
+    console.log("inner js bubble hit")
+})
+
